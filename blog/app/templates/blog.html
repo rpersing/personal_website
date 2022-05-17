@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="../static/styles.css">
+<div class="container">
+    <div class="row main-row p-2">
+        <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="blog-img">
+                <img src="../static/corvette.jpg" alt="An action shot of a red Corvette" class="img-fluid">
+            </div>
+            <div class="row">
+                <div class="col-sm-12 mb-2">
+                    <ul class="list-group list-group-horizontal ul-cls">
+                        <li class="list-group-item">
+                            <a href="https://www.instagram.com/string.of.yarn/"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                        </li>
+                        <li class="list-group-item" aria-hidden="true">
+                            <a href="https://github.com/rpersing"><i class="fa-brands fa-github fa-2x"></i></a>          
+                        </li>
+                        <li class="list-group-item" aria-hidden="true">
+                            <a href="https://www.linkedin.com/in/ryan-persinger-606aab143/"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-12 col-sm-12">
+            <div class="blog-title mb-3">
+                <h3>DGST101 Hello, World!</h3>
+            </div>
+            <div class="post-meta mb-2">
+                <span>Posted by: Ryan</span></br>
+                <span> Date Posted:
+                <script>
+                    date = new Date().toLocaleDateString();
+                    document.write(date);
+                </script>
+                </span>
+            </div>
+            <div class="blog-cont mb-2">
+                <p>
+                    Hi everyone! Welcome to my blog on my website. I've taken a bit of a different route than most of you probably. Instead of using Wordpress,
+                    I've set up a Python web application using the Flask framework and some assistance from Bootstrap. If anyone has any questions about this 
+                    process I'd be happy to answer any or even make a separate blog post/dev log of the process. Along with this post I've included some links 
+                    to some social medias that I have, as well as a picture of <em><b>one</b></em> of my favorite cars (a C7 Z06 Corvette). I'd also like to add
+                    that as you navigate this website with the navbar this is pretty much the only page that is "up and running". I will be adding some content to
+                    the other pages so stay tuned for that. Also, Bootstrap is pretty nice with making this website mobile compatible, so you should be able to
+                    use this website on your phone. Alright, this was much longer than I anctipated, but that about wraps up
+                    everything I wanted to say.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
