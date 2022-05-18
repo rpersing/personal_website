@@ -1,3 +1,8 @@
 flask
 flask-bootstrap
 markupsafe
+flask-wtf
+wtforms
+windows-curses
+email_validator
+SQLAlchemy
