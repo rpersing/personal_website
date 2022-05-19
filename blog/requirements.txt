@@ -6,3 +6,7 @@ wtforms
 email_validator
 flask_sqlalchemy
 SQLAlchemy
+flask_admin
+flask_login
+Flask-Migrate
+flask_ckeditor
