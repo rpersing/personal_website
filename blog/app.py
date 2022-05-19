@@ -169,4 +169,4 @@ def add_post():
 
 if __name__ == '__main__':
     db.create_all(app=app)
-    app.run(debug=True)
+    app.run()

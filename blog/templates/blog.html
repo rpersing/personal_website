@@ -37,14 +37,13 @@
                 <h3>{{ post.title }}</h3>
             </div>
             <div class="post-meta mb-2">
-                <span>Posted by: {{ post.author }}</span></br>
-                <span>Date Posted: {{ post.date_posted }}</span><br/>
+                <span>Posted by: Ryan</span></br>
+                <span>Date Posted: {{ post.date_posted.strftime('%B %d %Y - %H:%M')}}</span><br/>
                 <span>{{ post.slug }}</span>
-                <span>{{ post.post_thumbnail }}</span>
             </div>
             <div class="blog-cont mb-2">
                 <p>
-                    {{ post.content }}
+                    {{ post.content|safe }}
                 </p>
                 <p>
                     <a href="{{ url_for('post', id=post.id) }}" class="btn btn-outline-secondary btn-small">View Post</a>
