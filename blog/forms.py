@@ -18,7 +18,7 @@ class RegisterForm(FlaskForm):
 
 class BlogpostForm(FlaskForm):
     title = StringField("Title", validators=[DataRequired()])
-    content = StringField('Content', validators=[DataRequired()])
+    content = StringField('Content', validators=[DataRequired()], widget=TextArea())
     author = StringField("Author")
     slug = StringField("Slug", validators=[DataRequired()])
     post_pic = FileField("Post Pic")

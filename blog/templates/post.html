@@ -4,7 +4,12 @@
 
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
   {{ message }}
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
 </div>
 
 {% endfor %}
@@ -15,7 +20,7 @@
     <h2>{{ post.title }}</h2>
     <span>Posted by: {{ post.author }}</span></br>
     <span>Date Posted: {{ post.date_posted.strftime('%B %d, %Y') }}</span><br/>
-    {{ post.content }}<br/>
+    {{ post.content | safe }}<br/>
 
     <a href="{{ url_for('blog') }}" class="btn btn-outline-secondary btn-small">Back to Blog</a>
 

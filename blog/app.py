@@ -75,7 +75,7 @@ def edit_post(id):
         form.author.data = post.author
         form.slug.data = post.slug
         form.content.data = post.content
-        return render_template('edit_post.html', form=form)
+        return render_template('edit_post.html', page="Edit Post", form=form)
     else:
         return render_template('blog.html', page="Edit Post", form=form)
 
