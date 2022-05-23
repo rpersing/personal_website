@@ -13,8 +13,8 @@
 <div class="container shadow p-3 mb-5 bg-body">
 
     <h2>{{ post.title }}</h2>
-    <small>{{ post.author }}</small>
-    <small>{{ post.date_posted }}</small><br/>
+    <span>Posted by: {{ post.author }}</span></br>
+    <span>Date Posted: {{ post.date_posted.strftime('%B %d, %Y') }}</span><br/>
     {{ post.content }}<br/>
 
     <a href="{{ url_for('blog') }}" class="btn btn-outline-secondary btn-small">Back to Blog</a>

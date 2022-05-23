@@ -43,7 +43,7 @@ def home():
 @app.route('/blog')
 def blog():
 
-    posts = Blogpost.query.order_by(Blogpost.date_posted)
+    posts = Blogpost.query.order_by(Blogpost.date_posted.desc())
 
 
     return render_template('blog.html', page="Blog", posts=posts)
@@ -77,7 +77,7 @@ def edit_post(id):
         form.content.data = post.content
         return render_template('edit_post.html', form=form)
     else:
-        return render_template('blog.html', form=form)
+        return render_template('blog.html', page="Edit Post", form=form)
 
 
 @app.route('/portfolio')
@@ -127,7 +127,7 @@ def admin_login():
 def admin():
     id = current_user.id
     if id == 1:
-        return render_template('admin.html', page=Admin)
+        return render_template('admin.html', page="Admin")
     else:
         flash("Sorry, you must be an admin to access this page.")
         return redirect(url_for('home'))
@@ -159,8 +159,9 @@ def add_post():
             db.session.commit()
 
             flash('Blog Post has been posted successfully!')
+            return redirect(url_for('blog'))
 
-        return render_template("add_post.html", form=form)
+        return render_template("add_post.html", page="Add Post", form=form)
     
     else:
         flash("Sorry, you must be an admin to access this page.")
