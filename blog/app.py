@@ -132,6 +132,10 @@ def admin():
         flash("Sorry, you must be an admin to access this page.")
         return redirect(url_for('home'))
 
+@app.route('/digital-methodology')
+def digital_methodology():
+    return render_template("digital_methodology.html")
+
 
 @app.route('/add-post', methods=['GET', 'POST'])
 @login_required
