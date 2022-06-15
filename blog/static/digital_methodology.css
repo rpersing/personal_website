@@ -1,16 +1,17 @@
-.center {
-    font-style: normal;
-    line-height: 2;
-    text-align: center;
-}
-
 body {
     background: rgb(253, 250, 238);
 }
 
+iframe {
+    height: 300px;
+    width: 600px;
+    display: block;
+    margin: auto;
+}
+
 p {
     font-style: normal;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 2;
     font-family: monospace;
 }
